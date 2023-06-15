@@ -21,6 +21,10 @@ router.get('/rewardsredeemed', (req, res) => {
 	res.render('rewardsredeemed')
 });
 
+router.get('/self', (req, res) => {
+	res.render('self')
+});
+
 router.post('/flash', (req, res) => {
 	const message = 'This is an important message';
 	const error = 'This is an error message';
