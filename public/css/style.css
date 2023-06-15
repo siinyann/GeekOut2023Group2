@@ -41,3 +41,7 @@ a:hover {
   text-decoration:none; 
   cursor:pointer;  
 }
+
+.navbar-colour{
+  background-color: #f6f6e9;
+}
