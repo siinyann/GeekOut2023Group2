@@ -1,11 +1,99 @@
-<div class="jumbotron text-center">
-	<div class="container">
-		<h1 class="display-4">{{title}}</h1>
-		<p class="lead">Your personal video jotter</p>
-		<form method="post" action="/flash">
-			<button type="submit" class="btn btn-primary">Send Flash</button>
-		</form>
-	</div>
-	<br>
+<div class="container">
+	<h1 class="text-center"> June's contributions</h1>
+	<canvas id="usergraph" width="1000"></canvas>
+	<script>
+		var userCanvas = document.getElementById("usergraph");
+
+		var dataFirst = {
+			label: "Daily Food Waste Contributions",
+			data: [0, 0, 3, 0, 1, 0, 1, 0.5, 0, 0, 0, 3, 0, 0.5, 0],
+			lineTension: 0,
+			fill: false,
+			borderColor: 'red'
+		};
+
+		var dataSecond = {
+			label: "Cumulative Food waste Contributions",
+			data: [0, 0, 3, 3, 4, 4, 5, 5.5, 5.5, 5.5, 5.5, 8.5, 8.5, 9, 9],
+			lineTension: 0,
+			fill: false,
+		borderColor: 'blue'
+		};
+
+		var speedData = {
+		labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+		datasets: [dataFirst, dataSecond]
+		};
+
+		var chartOptions = {
+		legend: {
+			display: true,
+			position: 'top',
+			labels: {
+			boxWidth: 80,
+			fontColor: 'black'
+			}
+		},
+		scales: {
+			yAxes: [{ticks: {min: 0, max: 10}}],
+			xAxes: [{ticks: {min: 1, max: 30}}]
+			}
+		};
+
+		var lineChart = new Chart(userCanvas, {
+		type: 'line',
+		data: speedData,
+		options: chartOptions
+		});
+	</script>
+
+	<h2 class="text-center mt-5"> Donation History</h2>
+	<table class="table mb-5">
+		<thead class="thead-dark">
+			<tr>
+			<th scope="col">No.</th>
+			<th scope="col">Date</th>
+			<th scope="col">Amount of Food Waste contributed (kg)</th>
+			<th scope="col">Location</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<th scope="row">1</th>
+			<td>3 June</td>
+			<td>3</td>
+			<td>Ang Mo Kio-Hougang Angsana RN</td>
+			</tr>
+			<tr>
+			<th scope="row">1</th>
+			<td>5 June</td>
+			<td>1</td>
+			<td>Ang Mo Kio-Hougang Angsana RN</td>
+			</tr>			
+			<tr>
+			<th scope="row">1</th>
+			<td>7 June</td>
+			<td>1</td>
+			<td>Ang Mo Kio-Hougang Ixora RN</td>
+			</tr>
+			<tr>
+			<th scope="row">1</th>
+			<td>8 June</td>
+			<td>0.5</td>
+			<td>Ang Mo Kio-Hougang Angsana RN</td>
+			</tr>
+			<tr>
+			<th scope="row">1</th>
+			<td>12 June</td>
+			<td>3</td>
+			<td>Ang Mo Kio-Hougang Ixora RN</td>
+			</tr>
+			<tr>
+			<th scope="row">1</th>
+			<td>14 June</td>
+			<td>0.5</td>
+			<td>Ang Mo Kio-Hougang Angsana RN</td>
+			</tr>
+		</tbody>
+		</table>	
 </div>
-<h1>This is the home page</h1>

@@ -54,3 +54,7 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
 }
+
+body {
+  background-color: #f7fcf9;
+}

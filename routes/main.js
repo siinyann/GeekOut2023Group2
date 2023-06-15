@@ -3,9 +3,8 @@ const router = express.Router();
 const flashMessage = require('../helpers/messenger');
 
 router.get('/', (req, res) => {
-	const title = 'Video Jotter';
 	// renders views/index.handlebars, passing title as an object
-	res.render('index', { title: title })
+	res.render('index')
 });
 
 router.get('/about', (req, res) => {
@@ -24,6 +23,7 @@ router.get('/rewardsredeemed', (req, res) => {
 router.get('/self', (req, res) => {
 	res.render('self')
 });
+
 
 router.post('/flash', (req, res) => {
 	const message = 'This is an important message';
