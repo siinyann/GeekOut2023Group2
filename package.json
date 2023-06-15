@@ -1,13 +1,14 @@
 {
-  "name": "vidjot",
+  "name": "commposting",
   "version": "1.0.0",
-  "description": "Video Jotter",
+  "description": "Composting Mobile Application",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.5",
+    "chart.js": "^4.3.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
