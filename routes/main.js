@@ -12,4 +12,8 @@ router.get('/about', (req, res) => {
 	res.render('about', { author})
 });
 
+router.get('/rewards', (req, res) => {
+	const author = 'Your Name';
+	res.render('rewards', { author})
+});
 module.exports = router;

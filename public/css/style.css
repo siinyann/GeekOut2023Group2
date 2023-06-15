@@ -2,3 +2,13 @@
   width:130px;
   margin:auto;
 }
+
+.points{
+  background-color: #79b899 ;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+
+.rounded-corners {
+  border-radius: 5px;
+}
