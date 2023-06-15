@@ -14,9 +14,13 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/rewards', (req, res) => {
-	const author = 'Your Name';
-	res.render('rewards', { author})
+	res.render('rewards')
 });
+
+router.get('/rewardsredeemed', (req, res) => {
+	res.render('rewardsredeemed')
+});
+
 router.post('/flash', (req, res) => {
 	const message = 'This is an important message';
 	const error = 'This is an error message';

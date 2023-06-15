@@ -24,6 +24,20 @@
 }
 
 .indiv-rewards {
-  background-color: #79b899 ;
-  padding-top: 15px;
+  background-color: #f7fcf9 ;
+}
+
+.redeem-button {
+  background-color: #b6c8fa;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#000000; 
+  text-decoration:none; 
+  cursor:pointer;  
 }
