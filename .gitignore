@@ -1,2 +1,4 @@
 .env
 node_modules/
+node_modules/balanced-match
+node_modules/body-parser
