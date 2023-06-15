@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-colour mb-3">
 	<div class="container">
-		<a class="navbar-brand" href="/">
+		<a class="navbar-brand" href="/loggedin">
 			<img src="/img/logo.png" height="50" alt="logo">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -9,15 +9,21 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="/">Dashboard</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/rewards">Rewards</a>
-				</li>
+				{{#if user}}
+					<li class="nav-item">
+						<a class="nav-link" href="/loggedin">Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/rewards">Rewards</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/selflogin">Try it Yourself! </a>
+					</li>
+				{{else}}
 				<li class="nav-item">
 					<a class="nav-link" href="/self">Try it Yourself! </a>
 				</li>
+				{{/if}}
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				{{#if user}}

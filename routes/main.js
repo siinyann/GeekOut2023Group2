@@ -7,23 +7,31 @@ router.get('/', (req, res) => {
 	res.render('index')
 });
 
-router.get('/about', (req, res) => {
-	const author = 'Your Name';
-	res.render('about', { author})
+router.get('/loggedin', (req, res) => {
+	// renders views/index.handlebars, passing title as an object
+	let user = "group2@gmail.com";
+	res.render('index', { user })
 });
 
 router.get('/rewards', (req, res) => {
-	res.render('rewards')
+	let user = "group2@gmail.com";
+	res.render('rewards', { user })
 });
 
+
 router.get('/rewardsredeemed', (req, res) => {
-	res.render('rewardsredeemed')
+	let user = "group2@gmail.com";
+	res.render('rewardsredeemed', { user })
 });
 
 router.get('/self', (req, res) => {
 	res.render('self')
 });
 
+router.get('/selflogin', (req, res) => {
+	let user = "group2@gmail.com";
+	res.render('self', { user })
+});
 
 router.post('/flash', (req, res) => {
 	const message = 'This is an important message';
