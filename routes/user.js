@@ -10,6 +10,10 @@ router.get("/register", (req, res) => {
   res.render("user/register");
 });
 
+router.get("/profile", (req, res) => {
+  res.render("user/profile");
+});
+
 router.post("/register", function (req, res) {
   let { name, email, password, password2 } = req.body;
   let isValid = true;
