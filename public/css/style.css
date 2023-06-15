@@ -58,3 +58,7 @@ a:hover {
 body {
   background-color: #f7fcf9;
 }
+
+#map {
+  height: 100%;
+}

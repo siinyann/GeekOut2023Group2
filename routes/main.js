@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const flashMessage = require('../helpers/messenger');
 
-router.get('/', (req, res) => {
-	// renders views/index.handlebars, passing title as an object
-	res.render('index')
-});
+//router.get('/', (req, res) => {
+	//renders views/index.handlebars, passing title as an object
+	//res.render('maptrial')
+//});
 
 router.get('/loggedin', (req, res) => {
 	// renders views/index.handlebars, passing title as an object
