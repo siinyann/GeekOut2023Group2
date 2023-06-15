@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
 	<div class="container">
 		<a class="navbar-brand" href="/">
-			<img src="/img/logo.png" height="50" alt="">
-			
+			<img src="/img/logo.png" height="50" alt="logo">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +18,7 @@
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				{{#if user}}
-				<li class="nav-item dropdown">
+				{{!-- <li class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
 						id="navbarDropdownMenuLink">Video
 						Jots</a>
@@ -27,9 +26,12 @@
 						<a href="" class="dropdown-item">Videos</a>
 						<a href="" class="dropdown-item">Add Video</a>
 					</div>
+				</li> --}}
+				<li class="nav-item">
+					<a href="/user/profile" class="nav-link">Profile</a>
 				</li>
 				<li class="nav-item">
-					<a href="" class="nav-link">Logout</a>
+					<a href="/user/logout" class="nav-link">Logout</a>
 				</li>
 				{{else}}
 				<li class="nav-item">

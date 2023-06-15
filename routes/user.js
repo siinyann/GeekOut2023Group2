@@ -11,7 +11,8 @@ router.get("/register", (req, res) => {
 });
 
 router.get("/profile", (req, res) => {
-  res.render("user/profile");
+  const user = "group2@gmail.com"
+  res.render("user/profile", { user });
 });
 
 router.post("/register", function (req, res) {
@@ -37,26 +38,16 @@ router.post("/register", function (req, res) {
 });
 
 router.post("/login", (req, res, next) => {
-  // passport.authenticate("local", {
-  //   // Success redirect URL
-  //   successRedirect: "/video/listVideos",
-  //   // Failure redirect URL
-  //   failureRedirect: "/user/login",
-  //   /* Setting the failureFlash option to true instructs Passport to flash 
-  // an error message using the message given by the strategy's verify callback.
-  // When a failure occur passport passes the message object as error */
-  //   failureFlash: true,
-  // })(req, res, next);
-
+  
   let { email, password } = req.body;
-  let user = "sinyanchong4@gmail.com"
+  let user = "group2@gmail.com"
   let isValid = true;
 
   if (password.length < 8) {
     flashMessage(res, "error", "Password must be at least 8 characters");
     isValid = false;
   }
-  if ((password != 'Csy.2003' && email != "sinyanchong4@gmail.com") || password != 'Csy.2003') {
+  if ((password != 'Group2.1356' && email != "group2@gmail.com") || password != 'Group2.1356') {
     flashMessage(res, "error", "Invalid password or email address");
     isValid = false;
   }
@@ -71,12 +62,7 @@ router.post("/login", (req, res, next) => {
 });
 
 router.get('/logout', function (req, res, next) {
-  req.logout(function (err) {
-    if (err) {
-      return next(err)
-    }
     res.redirect('/')
-  })
 })
 
 module.exports = router;
