@@ -40,7 +40,7 @@ router.post("/register", function (req, res) {
 router.post("/login", (req, res, next) => {
   
   let { email, password } = req.body;
-  let user = "group2@gmail.com"
+  const user = "group2@gmail.com"
   let isValid = true;
 
   if (password.length < 8) {
